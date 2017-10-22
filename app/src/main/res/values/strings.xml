@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Calendar</string>
+    <string name="app_name">UG Calendar</string>
+    <string name="title_activity_registro1">registro1</string>
 </resources>
