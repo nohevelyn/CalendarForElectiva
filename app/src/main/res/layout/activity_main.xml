@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.adrian.calendar.MainActivity">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dip">
 
-    <TextView
-        android:id="@+id/TextQueDebeCambiar"
-        android:visibility="visible"
-        android:layout_width="wrap_content"
+    <EditText android:id="@+id/txtEmail"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText android:id="@+id/txtPass"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:onClick="cambiarTexto"
-        android:id="@+id/Boton_Prueba"/>
+        android:layout_width="fill_parent"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="30dip" />
 
+    <TextView android:id="@+id/login_error"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:layout_marginBottom="40dip"
+        android:gravity="center"
+        android:textSize="20dip"
+        android:textColor="#0b84aa"
+        android:visibility="gone"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button android:id="@+id/btnLogin"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Iniciar Sesion"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip" />
+
+    <TextView android:id="@+id/link_to_register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:layout_marginBottom="40dip"
+        android:text="¿Eres alumno? registrate!"
+        android:gravity="center"
+        android:textSize="20dip"
+        android:textColor="#0b84aa"/>
+
+</LinearLayout>

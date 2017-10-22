@@ -5,26 +5,38 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView lblGotoRegister;
+    private Button btnLogin;
+    private EditText inputEmail;
+    private EditText inputPassword;
+    private TextView loginErrorMsg;
 
-    public Button boton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button boton=(Button)findViewById(R.id.Boton_Prueba);
-        boton.setText("Click en mi");
-    }
 
-    public void cambiarTexto(View v){
+        inputEmail = (EditText) findViewById(R.id.txtEmail);
+        inputPassword = (EditText) findViewById(R.id.txtPass);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+        loginErrorMsg = (TextView) findViewById(R.id.login_error);
 
-        String s="Esta es una prueba";
-        TextView texto=(TextView) findViewById(R.id.TextQueDebeCambiar);
-        texto.setText(s);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                String email = inputEmail.getText().toString();
+                String password = inputPassword.getText().toString();
+                loginErrorMsg.setVisibility(view.getVisibility());
+            }
+        });
+
+
     }
 }
+
