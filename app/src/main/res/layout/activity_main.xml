@@ -11,7 +11,7 @@
     <EditText android:id="@+id/txtUsuario"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:hint="Usuario"
+        android:hint="Usuario o correo"
         android:inputType="textAutoComplete" />
 
     <EditText android:id="@+id/txtPass"
